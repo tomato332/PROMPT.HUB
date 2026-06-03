@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AI Button Effect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .ai-button {
+            position: relative;
+            padding: 2px; /* 테두리 공간 */
+            border-radius: 100px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            overflow: hidden;
+            display: inline-block;
+            transition: transform 0.2s;
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+        }
+
+        .ai-button:active {
+            transform: scale(0.98);
+        }
+
+        /* 무지개 테두리 컨테이너 (마스크 적용) */
+        .rainbow-container {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 0;
+            border-radius: 100px;
+            overflow: hidden;
+            mask: radial-gradient(circle at var(--mouse-x) var(--mouse-y), black 0%, transparent 70%);
+            -webkit-mask: radial-gradient(circle at var(--mouse-x) var(--mouse-y), black 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .ai-button:hover .rainbow-container {
+            opacity: 1;
+        }
+
+        /* 주변 빛번짐 (Glow) 효과 */
+        .ai-button::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            background: radial-gradient(
+                circle at var(--mouse-x) var(--mouse-y),
+                rgba(66, 133, 244, 0.4),
+                rgba(234, 67, 53, 0.4),
+                rgba(251, 188, 5, 0.4),
+                rgba(52, 168, 83, 0.4),
+                transparent 70%
+            );
+            filter: blur(15px);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .ai-button:hover::after {
+            opacity: 1;
+        }
+
+        /* 실제로 회전하는 무지개 테두리 */
+        .rainbow-border {
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                #4285f4, #ea4335, #fbbc05, #34a853, #4285f4
+            );
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* 버튼 내부 콘텐츠 */
+        .button-content {
+            position: relative;
+            z-index: 1;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1f1f1f;
+            height: 36px;
+            box-sizing: border-box;
+        }
+
+        .sparkle-icon {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="ai-button">
+  <div class="rainbow-container">
+    <div class="rainbow-border"></div>
+  </div>
+  <div class="button-content">
+    <span class="sparkle-icon">✨</span>
+    AI 모드
+  </div>
+</button>
+
+<script>
+    const button = document.querySelector('.ai-button');
+
+    button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        
+        button.style.setProperty('--mouse-x', `${x}%`);
+        button.style.setProperty('--mouse-y', `${y}%`);
+    });
+</script>
+
+</body>
+</html>
