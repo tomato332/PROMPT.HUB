@@ -1,1 +1,1 @@
-(노션 링크)[https://instinctive-porkpie-134.notion.site/374b9dcfc92280e89f8ecbbe5bfc27c1?source=copy_link]
+[노션 링크](https://instinctive-porkpie-134.notion.site/374b9dcfc92280e89f8ecbbe5bfc27c1?source=copy_link)
