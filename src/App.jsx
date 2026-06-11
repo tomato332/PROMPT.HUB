@@ -45,8 +45,28 @@ export default function App() {
     rules: ['structured'],
     tone: 'professional',
     lang: 'ko',
-    useMock: false
+    useMock: false,
+    provider: 'vertex',   // 'vertex' | 'openrouter'
+    model: '',            // OpenRouter 모델 ID (비우면 첫 번째 무료 모델)
   });
+  const [freeModels, setFreeModels] = useState([]);
+  const [modelsLoading, setModelsLoading] = useState(false);
+
+  // OpenRouter 무료 모델 목록 불러오기
+  useEffect(() => {
+    if (aiSettings.provider === 'openrouter' && freeModels.length === 0) {
+      setModelsLoading(true);
+      import('./ai').then(({ getFreeModels }) => {
+        getFreeModels().then(models => {
+          setFreeModels(models);
+          if (models.length > 0 && !aiSettings.model) {
+            setAiSettings(prev => ({ ...prev, model: models[0].id }));
+          }
+          setModelsLoading(false);
+        });
+      });
+    }
+  }, [aiSettings.provider]);
 
   const handleAiSettingToggle = (rule) => {
     setAiSettings(prev => ({
@@ -55,6 +75,11 @@ export default function App() {
         ? prev.rules.filter(r => r !== rule)
         : [...prev.rules, rule]
     }));
+  };
+
+  const handleProviderChange = (provider) => {
+    setAiSettings(prev => ({ ...prev, provider, model: '' }));
+    setFreeModels([]);
   };
   const [copyStatus, setCopyStatus] = useState(null);
   const [view, setView] = useState('main');
@@ -345,6 +370,18 @@ export default function App() {
                   
                   {isAiMode && (
                     <div className="ai-pre-settings">
+                      {/* 프로바이더 선택 */}
+                      <div className="settings-group">
+                        <button
+                          className={`setting-chip provider-chip ${aiSettings.provider === 'vertex' ? 'active' : ''}`}
+                          onClick={() => handleProviderChange('vertex')}
+                        >Vertex AI</button>
+                        <button
+                          className={`setting-chip provider-chip ${aiSettings.provider === 'openrouter' ? 'active' : ''}`}
+                          onClick={() => handleProviderChange('openrouter')}
+                        >OpenRouter</button>
+                      </div>
+                      <div className="settings-divider"></div>
                       <div className="settings-group">
                         <button 
                           className={`setting-chip ${aiSettings.rules.includes('structured') ? 'active' : ''}`}
@@ -376,6 +413,24 @@ export default function App() {
                       >
                         <option value="ko">한국어</option>
                         <option value="en">English</option>
+                      </select>
+                      <div className="settings-divider"></div>
+                      {/* 모델 드롭다운 — 항상 자리 차지, OpenRouter 아니면 disabled */}
+                      <select
+                        className="setting-select model-select"
+                        value={aiSettings.model}
+                        disabled={aiSettings.provider !== 'openrouter'}
+                        onChange={(e) => setAiSettings({...aiSettings, model: e.target.value})}
+                      >
+                        {modelsLoading ? (
+                          <option value="">불러오는 중...</option>
+                        ) : freeModels.length === 0 ? (
+                          <option value="">무료 모델 없음</option>
+                        ) : (
+                          freeModels.map(m => (
+                            <option key={m.id} value={m.id}>{m.name}</option>
+                          ))
+                        )}
                       </select>
                       <div className="settings-divider"></div>
                       <button 
