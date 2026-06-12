@@ -92,6 +92,21 @@ export default function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
   const [showStickySearch, setShowStickySearch] = useState(false);
+  const [sortBy, setSortBy] = useState('latest'); // 'latest' | 'popular' | 'views'
+
+  // 정렬된 프롬프트 (정렬 + 필터)
+  const getSortedPrompts = () => {
+    let list = [...filteredPrompts];
+    if (sortBy === 'popular') {
+      list.sort((a, b) => (b.likes || 0) - (a.likes || 0));
+    } else if (sortBy === 'views') {
+      list.sort((a, b) => (b.views || 0) - (a.views || 0));
+    } else {
+      // 최신순: id 기준 내림차순 (최신 데이터가 큰 id)
+      list.sort((a, b) => b.id - a.id);
+    }
+    return list;
+  };
 
   useEffect(() => {
     // 카테고리나 뷰, 모달 상태가 바뀌면 스티키 검색바 초기화 및 스크롤 상단으로
@@ -457,10 +472,24 @@ export default function App() {
 
               <div className="flex items-center justify-between mb-10">
                 <h2 className="text-xs font-bold text-dim uppercase tracking-widest">탐색하기</h2>
+                <div className="sort-tabs">
+                  <button
+                    className={`sort-tab ${sortBy === 'latest' ? 'active' : ''}`}
+                    onClick={() => setSortBy('latest')}
+                  >최신순</button>
+                  <button
+                    className={`sort-tab ${sortBy === 'popular' ? 'active' : ''}`}
+                    onClick={() => setSortBy('popular')}
+                  >인기순</button>
+                  <button
+                    className={`sort-tab ${sortBy === 'views' ? 'active' : ''}`}
+                    onClick={() => setSortBy('views')}
+                  >조회순</button>
+                </div>
               </div>
 
               <div className="prompt-list">
-                {filteredPrompts.map((prompt) => (
+                {getSortedPrompts().map((prompt) => (
                   <div
                     key={prompt.id}
                     className={`card ${selectedPrompt?.id === prompt.id ? 'active' : ''}`}

@@ -1515,3 +1515,40 @@ body {
 .tracking-tight { letter-spacing: -0.025em; }
 .tracking-widest { letter-spacing: 0.1em; }
 .text-dim { color: var(--text-dim); }
+
+/* 탐색하기 - 타이틀 + 정렬 탭 */
+.flex.items-center.justify-between.mb-10 {
+  margin-bottom: 2rem;
+}
+
+.sort-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+}
+
+.sort-tab {
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sort-tab.active {
+  background: var(--background);
+  color: var(--text-main);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.sort-tab:hover:not(.active) {
+  color: var(--text-muted);
+}

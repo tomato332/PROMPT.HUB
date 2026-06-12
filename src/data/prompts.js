@@ -7,6 +7,7 @@ export const prompts = [
     category: "학습",
     model: "Claude 4.7 Opus",
     likes: 1240,
+    views: 4580,
     tags: ["언어", "학습", "외국어"],
     tips: ["구체적인 상황을 제시할수록 더 정확한 뉘앙스를 얻을 수 있어요."]
   },
@@ -18,6 +19,7 @@ export const prompts = [
     category: "업무",
     model: "GPT-5.5",
     likes: 850,
+    views: 3210,
     tags: ["비즈니스", "스타트업", "IR"],
     tips: ["슬라이드별 핵심 메시지와 함께 작성해달라고 하면 더 효과적입니다."]
   },
@@ -29,6 +31,7 @@ export const prompts = [
     category: "일상",
     model: "Gemini 2.0",
     likes: 560,
+    views: 1870,
     tags: ["건강", "식단", "웰빙"],
     tips: ["자주 가는 마트의 재료 위주로 짜달라고 요청해보세요."]
   },
@@ -40,6 +43,7 @@ export const prompts = [
     category: "코딩",
     model: "Llama 4",
     likes: 2100,
+    views: 6720,
     tags: ["개발", "리팩토링", "클린코드"],
     tips: ["성능 최적화 버전과 가독성 최적화 버전을 따로 요청할 수 있습니다."]
   },
@@ -51,6 +55,7 @@ export const prompts = [
     category: "창작",
     model: "Claude 4.7 Opus",
     likes: 930,
+    views: 2840,
     tags: ["소설", "작가", "세계관"],
     tips: ["주인공의 결함이나 비밀을 구체적으로 설정해달라고 해보세요."]
   },
@@ -62,6 +67,7 @@ export const prompts = [
     category: "학습",
     model: "GPT-5.5",
     likes: 3100,
+    views: 8930,
     tags: ["논문", "공부", "요약"],
     tips: ["'한 문장 요약'이나 '핵심 키워드 3개'를 추가로 요청해보세요."]
   },
@@ -73,6 +79,7 @@ export const prompts = [
     category: "창작",
     model: "Gemini 2.0",
     likes: 420,
+    views: 1560,
     tags: ["영상", "유튜브", "자막"],
     tips: ["타겟 시청자층의 말투(반말/존댓말/Z세대 언어 등)를 지정하면 더 좋습니다."]
   },
@@ -84,6 +91,7 @@ export const prompts = [
     category: "일상",
     model: "Llama 4",
     likes: 1540,
+    views: 4320,
     tags: ["자기계발", "회고", "목표"],
     tips: ["구체적인 실패 사례를 적을수록 더 실용적인 피드백이 나옵니다."]
   },
@@ -95,6 +103,7 @@ export const prompts = [
     category: "코딩",
     model: "GPT-5.5",
     likes: 890,
+    views: 2670,
     tags: ["DB", "SQL", "백엔드"],
     tips: ["Explain Plan 결과를 함께 입력하면 더 정확한 튜닝이 가능합니다."]
   },
@@ -106,6 +115,7 @@ export const prompts = [
     category: "업무",
     model: "Claude 4.7 Opus",
     likes: 2400,
+    views: 7310,
     tags: ["브랜딩", "디자인", "마케팅"],
     tips: ["도메인 등록 가능 여부를 확인해달라고 추가로 요청할 수 있습니다."]
   },
@@ -117,6 +127,7 @@ export const prompts = [
     category: "학습",
     model: "Gemini 2.0",
     likes: 720,
+    views: 1980,
     tags: ["수학", "교육", "과학"],
     tips: ["'파이썬 코드로 이 문제를 시뮬레이션해줘'라고 하면 더 입체적으로 이해됩니다."]
   },
@@ -128,6 +139,7 @@ export const prompts = [
     category: "일상",
     model: "Llama 4",
     likes: 1800,
+    views: 5230,
     tags: ["여행", "관광", "계획"],
     tips: ["동선 효율성을 고려해서 지도를 그려달라고 요청해보세요."]
   },
@@ -139,6 +151,7 @@ export const prompts = [
     category: "업무",
     model: "GPT-5.5",
     likes: 1100,
+    views: 3450,
     tags: ["비즈니스", "이메일", "커뮤니케이션"],
     tips: ["사내 메신저(슬랙 등)용 짧은 공지 버전도 함께 요청하면 편합니다."]
   },
@@ -150,6 +163,7 @@ export const prompts = [
     category: "코딩",
     model: "Claude 4.7 Opus",
     likes: 650,
+    views: 2130,
     tags: ["개발", "RegEx", "데이터"],
     tips: ["엣지 케이스(예외 상황)에 대한 테스트 데이터도 함께 요청하세요."]
   },
@@ -161,6 +175,7 @@ export const prompts = [
     category: "일상",
     model: "Gemini 2.0",
     likes: 480,
+    views: 1420,
     tags: ["명상", "정신건강", "휴식"],
     tips: ["배경음악으로 어울리는 자연 소리를 추천해달라고 해보세요."]
   },
@@ -172,6 +187,7 @@ export const prompts = [
     category: "창작",
     model: "Llama 4",
     likes: 2300,
+    views: 6850,
     tags: ["SNS", "마케팅", "유튜브"],
     tips: ["화면 전환(컷 편집) 타이밍도 함께 표시해달라고 하세요."]
   },
@@ -183,6 +199,7 @@ export const prompts = [
     category: "코딩",
     model: "GPT-5.5",
     likes: 1320,
+    views: 3980,
     tags: ["데이터분석", "파이썬", "시각화"],
     tips: ["'인터랙티브한 차트를 위해 Plotly를 써줘'라고 요청할 수 있습니다."]
   },
@@ -194,6 +211,7 @@ export const prompts = [
     category: "학습",
     model: "Claude 4.7 Opus",
     likes: 2750,
+    views: 8120,
     tags: ["역사", "인문학", "인터뷰"],
     tips: ["당시의 시대적 배경 지식을 함께 알려달라고 하면 더 유익합니다."]
   },
@@ -205,6 +223,7 @@ export const prompts = [
     category: "업무",
     model: "Gemini 2.0",
     likes: 1900,
+    views: 5740,
     tags: ["취업", "면접", "자소서"],
     tips: ["예상 꼬리 질문을 3가지 더 뽑아달라고 하세요."]
   },
@@ -216,6 +235,7 @@ export const prompts = [
     category: "창작",
     model: "Llama 4",
     likes: 670,
+    views: 1940,
     tags: ["TRPG", "게임设计", "스토리"],
     tips: ["주요 NPC의 능력치와 대사 톤을 지정해달라고 요청해보세요."]
   },
@@ -227,6 +247,7 @@ export const prompts = [
     category: "코딩",
     model: "Claude 4.7 Opus",
     likes: 1580,
+    views: 4620,
     tags: ["리액트", "자바스크립트", "최적화"],
     tips: ["'프로파일링 도구로 분석했을 때 느린 부분이야'라고 구체적으로 알려주세요."]
   },
@@ -238,6 +259,7 @@ export const prompts = [
     category: "학습",
     model: "GPT-5.5",
     likes: 2120,
+    views: 6390,
     tags: ["AI", "딥러닝", "공부"],
     tips: ["각 단계별로 실습해볼 만한 캐글(Kaggle) 프로젝트를 추천해달라고 하세요."]
   },
@@ -249,6 +271,7 @@ export const prompts = [
     category: "일상",
     model: "Gemini 2.0",
     likes: 430,
+    views: 1230,
     tags: ["IOT", "스마트홈", "인테리어"],
     tips: ["특수 상황(미세먼지 농도 높을 때, 비 올 때 등)에 대한 루틴도 제안받아보세요."]
   },
@@ -260,6 +283,7 @@ export const prompts = [
     category: "업무",
     model: "Llama 4",
     likes: 1260,
+    views: 3520,
     tags: ["세일즈", "영업", "심리학"],
     tips: ["고객의 직업이나 나이대를 명시하면 더 효과적인 멘트가 나옵니다."]
   },
@@ -271,6 +295,7 @@ export const prompts = [
     category: "학습",
     model: "Claude 4.7 Opus",
     likes: 890,
+    views: 2540,
     tags: ["독서", "책추천", "인문학"],
     tips: ["소설 뿐만 아니라 비문학 등 다른 장르와의 연계도 요청해보세요."]
   },
@@ -282,6 +307,7 @@ export const prompts = [
     category: "코딩",
     model: "GPT-5.5",
     likes: 1450,
+    views: 4100,
     tags: ["타입스크립트", "개발", "JS"],
     tips: ["Utility Types(Pick, Omit 등)를 적극 사용해달라고 명시하세요."]
   },
@@ -293,6 +319,7 @@ export const prompts = [
     category: "일상",
     model: "Gemini 2.0",
     likes: 910,
+    views: 2780,
     tags: ["재테크", "금융", "투자"],
     tips: ["반드시 투자 권유가 아닌 정보 제공임을 인지하고 참고용으로만 활용하세요."]
   },
@@ -304,6 +331,7 @@ export const prompts = [
     category: "창작",
     model: "Llama 4",
     likes: 1100,
+    views: 3150,
     tags: ["웹소설", "작가", "창작"],
     tips: ["장르 특유의 클리셰나 유행하는 코드를 넣어달라고 요청하세요."]
   },
@@ -315,6 +343,7 @@ export const prompts = [
     category: "업무",
     model: "GPT-5.5",
     likes: 1720,
+    views: 4890,
     tags: ["기획", "AI서비스", "비즈니스"],
     tips: ["수익 모델(비즈니스 모델) 3가지를 추가로 제안해달라고 해보세요."]
   },
@@ -326,6 +355,7 @@ export const prompts = [
     category: "업무",
     model: "Claude 4.7 Opus",
     likes: 2280,
+    views: 6530,
     tags: ["영어", "발표", "취업"],
     tips: ["질문을 이해하지 못했을 때 시간을 버는 '필러 문구'도 요청해보세요."]
   },
@@ -337,6 +367,7 @@ export const prompts = [
     category: "코딩",
     model: "Gemini 2.0",
     likes: 740,
+    views: 2450,
     tags: ["데브옵스", "도커", "인프라"],
     tips: [".dockerignore 파일에 들어가야 할 목록도 함께 뽑아달라고 하세요."]
   },
@@ -348,6 +379,7 @@ export const prompts = [
     category: "학습",
     model: "Llama 4",
     likes: 560,
+    views: 1780,
     tags: ["공부", "루틴", "효율"],
     tips: ["각 휴식 시간마다 가볍게 하기 좋은 스트레칭 동작도 추천받아보세요."]
   },
@@ -359,6 +391,7 @@ export const prompts = [
     category: "창작",
     model: "Claude 4.7 Opus",
     likes: 1200,
+    views: 3620,
     tags: ["유튜브", "창작", "마케팅"],
     tips: ["자신의 실제 별명이나 자주 쓰는 유행어를 알려주면 훨씬 자연스럽습니다."]
   },
@@ -370,6 +403,7 @@ export const prompts = [
     category: "일상",
     model: "GPT-5.5",
     likes: 410,
+    views: 1340,
     tags: ["일상", "글쓰기", "기념일"],
     tips: ["현장의 연령대 분위기를 알려주면 단어 선택이 더 적절해집니다."]
   },
@@ -381,6 +415,7 @@ export const prompts = [
     category: "코딩",
     model: "Gemini 2.0",
     likes: 820,
+    views: 2310,
     tags: ["AWS", "클라우드", "비용절감"],
     tips: ["AWS Cost Explorer의 지표를 대략적으로 알려주면 더 상세한 분석이 가능합니다."]
   },
@@ -392,6 +427,7 @@ export const prompts = [
     category: "업무",
     model: "Llama 4",
     likes: 1340,
+    views: 3890,
     tags: ["디자인", "UIUX", "피드백"],
     tips: ["참고한 레퍼런스 서비스 이름을 말해주면 디자인 방향성이 더 명확해집니다."]
   },
@@ -403,6 +439,7 @@ export const prompts = [
     category: "학습",
     model: "GPT-5.5",
     likes: 2500,
+    views: 7410,
     tags: ["면접", "CS", "데이터"],
     tips: ["동작 원리를 그림으로 설명하는 것처럼 텍스트로 풀어달라고 하세요."]
   },
@@ -414,6 +451,7 @@ export const prompts = [
     category: "일상",
     model: "Claude 4.7 Opus",
     likes: 620,
+    views: 1840,
     tags: ["운동", "건강", "필라테스"],
     tips: ["주의해야 할 동작과 호흡법을 반드시 함께 물어보세요."]
   },
@@ -425,6 +463,7 @@ export const prompts = [
     category: "창작",
     model: "Gemini 2.0",
     likes: 1050,
+    views: 3180,
     tags: ["소설", "작가", "창작"],
     tips: ["'어둡고 축축한 느낌'처럼 구체적인 현장의 분위기를 묘사해달라고 하세요."]
   },
@@ -436,6 +475,7 @@ export const prompts = [
     category: "코딩",
     model: "Llama 4",
     likes: 980,
+    views: 2840,
     tags: ["DB", "설계", "백엔드"],
     tips: ["향후 데이터가 수천만 건으로 늘어날 경우의 파티셔닝 전략도 물어보세요."]
   },
@@ -447,6 +487,7 @@ export const prompts = [
     category: "업무",
     model: "GPT-5.5",
     likes: 720,
+    views: 2120,
     tags: ["네트워킹", "커뮤니케이션", "비즈니스"],
     tips: ["명함을 건네는 타이밍과 함께 물어보면 실전에서 유용합니다."]
   },
@@ -458,6 +499,7 @@ export const prompts = [
     category: "일상",
     model: "Claude 4.7 Opus",
     likes: 1950,
+    views: 5610,
     tags: ["자기계발", "습관", "심리학"],
     tips: ["'화장실에서 나오면 팔굽혀펴기 한 번'처럼 특정 환경 트리거를 함께 설정하세요."]
   },
@@ -469,6 +511,7 @@ export const prompts = [
     category: "학습",
     model: "Gemini 2.0",
     likes: 1100,
+    views: 3240,
     tags: ["법률", "상식", "일상"],
     tips: ["결정적인 판단은 전문가와 상담하되, 초안 검토용으로만 우수합니다."]
   },
@@ -480,6 +523,7 @@ export const prompts = [
     category: "업무",
     model: "Llama 4",
     likes: 1420,
+    views: 4150,
     tags: ["블로그", "마케팅", "커리어"],
     tips: ["클릭을 부르는 제목(어그로 말고 가시성 위주) 10개도 요청해보세요."]
   },
@@ -491,6 +535,7 @@ export const prompts = [
     category: "코딩",
     model: "GPT-5.5",
     likes: 850,
+    views: 2560,
     tags: ["K8S", "인프라", "데브옵스"],
     tips: ["Describe 명령어나 YAML 설정 파일의 일부를 보여주면 훨씬 정확합니다."]
   },
@@ -502,6 +547,7 @@ export const prompts = [
     category: "학습",
     model: "Claude 4.7 Opus",
     likes: 2100,
+    views: 6020,
     tags: ["언어", "회화", "학습"],
     tips: ["'화가 난 점원'처럼 페르소나의 감정 상태를 정해주면 더 흥미진진합니다."]
   },
@@ -513,6 +559,7 @@ export const prompts = [
     category: "창작",
     model: "Gemini 2.0",
     likes: 380,
+    views: 1090,
     tags: ["음악", "예술", "취미"],
     tips: ["비슷한 사운드의 다른 아티스트도 추천해달라고 해보세요."]
   },
@@ -524,6 +571,7 @@ export const prompts = [
     category: "일상",
     model: "Llama 4",
     likes: 540,
+    views: 1650,
     tags: ["요리", "레시피", "일상"],
     tips: ["식감의 조화(바삭함/촉촉함 등)를 고려해달라고 명시하세요."]
   },
@@ -535,6 +583,7 @@ export const prompts = [
     category: "업무",
     model: "GPT-5.5",
     likes: 3200,
+    views: 9320,
     tags: ["기획", "비판", "전략"],
     tips: ["감정 상하지 마세요! 비판을 해결하는 과정에서 최고의 기획이 나옵니다."]
   },
@@ -546,6 +595,7 @@ export const prompts = [
     category: "학습",
     model: "Claude 4.7 Opus",
     likes: 450,
+    views: 1370,
     tags: ["바이오", "과학", "연구"],
     tips: ["서열 도메인 분석 도구를 추천받는 용도로도 좋습니다."]
   },
@@ -557,6 +607,7 @@ export const prompts = [
     category: "코딩",
     model: "Llama 4",
     likes: 1150,
+    views: 3470,
     tags: ["Rust", "개발", "백엔드"],
     tips: ["'Pin'이나 'Future' 개념이 어떻게 적용되었는지 함께 물어보세요."]
   },
@@ -568,6 +619,7 @@ export const prompts = [
     category: "일상",
     model: "GPT-5.5",
     likes: 2800,
+    views: 8350,
     tags: ["심리", "위로", "상담"],
     tips: ["특정 상담 기법(인지행동치료 등)을 사용해달라고 하면 더 전문적입니다."]
   },
@@ -579,6 +631,7 @@ export const prompts = [
     category: "일상",
     model: "Gemini 2.0",
     likes: 640,
+    views: 1920,
     tags: ["연애", "대화", "일상"],
     tips: ["상대방의 말투가 어떨지(조용한 편/활발한 편)에 맞춰 톤을 조정하세요."]
   },
@@ -590,6 +643,7 @@ export const prompts = [
     category: "창작",
     model: "Claude 4.7 Opus",
     likes: 880,
+    views: 2560,
     tags: ["인테리어", "디자인", "공간"],
     tips: ["방의 실측 수치나 창문 위치를 알려주면 훨씬 실용적인 배치가 나옵니다."]
   },
